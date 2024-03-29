@@ -1332,7 +1332,7 @@ from django.db import connection
 # Составляем SQL-запрос
 sql = """
 SELECT id, headline
-FROM db_entry
+FROM db_train_alternative_entry
 WHERE headline LIKE '%%тайны%%' OR body_text LIKE '%%город%%'
 """
 
@@ -1356,7 +1356,7 @@ for result in results:
 results = Entry.objects.raw(
     """
     SELECT id, headline
-    FROM db_entry
+    FROM db_train_alternative_entry
     WHERE headline LIKE '%%тайны%%' OR body_text LIKE '%%город%%'
     """
 )
